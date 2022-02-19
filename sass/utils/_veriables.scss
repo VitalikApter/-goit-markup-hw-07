@@ -1,0 +1,93 @@
+$header-text-color: #212121;
+$first-title-color: #212121;
+$first-btn-color: #212121;
+$link-color: #2196f3;
+$adress-lnk-color: #757575;
+$accent-color: #2196f3;
+$transparent-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+body {
+  font-family: roboto, sans-serif;
+  color: var(--first-title-color);
+}
+.list {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.link {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+button:hover,
+button:focus {
+  color: #188ce8;
+}
+
+.current {
+  color: $link-color;
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: $link-color;
+  left: 0;
+  bottom: 0;
+  background-image: url(../images/hover.svg);
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+}

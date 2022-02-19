@@ -1,0 +1,20 @@
+.header {
+  border-bottom: 1px solid;
+  &__container {
+    display: flex;
+  }
+
+  &__logo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-right: 93px;
+    &-web {
+      color: $link-color;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.skills {
+  padding-top: 94px;
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $header-text-color;
+    margin-bottom: 10px;
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+  &__item {
+    width: 270px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $adress-lnk-color;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__container {
+    background: #f5f4fa;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 120px;
+  }
+}
