@@ -11,7 +11,7 @@ $transparent-animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  
 }
 body {
   font-family: roboto, sans-serif;
@@ -68,8 +68,7 @@ button:focus {
   left: 0;
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity $transparent-animation, visibility $transparent-animation;
 }
 
 .backdrop.is-hidden {
@@ -88,6 +87,6 @@ button:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: translate $transparent-animation;
   padding: 40px;
 }
